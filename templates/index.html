@@ -1,0 +1,154 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+{% endblock %}
+
+{% block body %}
+    <header class="hero">
+        <div class="nav-container">
+            <div class="logo">
+                <h2>Spectrum<span>App</span></h2>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="#">Features</a></li>
+                    <li><a href="#">Pricing</a></li>
+                    <li><a href="#">About</a></li>
+                </ul>
+            </nav>
+            <div class="cta-buttons">
+                <a href="#" class="btn btn-outline">Login</a>
+                <a href="#" class="btn btn-primary">Sign Up</a>
+            </div>
+        </div>
+        
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Transform Your Workflow</h1>
+                <p>The all-in-one platform designed to boost productivity and streamline your projects.</p>
+                <div class="hero-cta">
+                    <a href="#" class="btn btn-primary btn-large">Get Started for Free</a>
+                    <a href="#" class="btn btn-outline-light btn-large">
+                        <i class="fas fa-play-circle"></i> Watch Demo
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="/api/placeholder/600/400" alt="Dashboard Preview">
+            </div>
+        </div>
+    </header>
+
+    <section class="features">
+        <h2 class="section-title">Why Choose SpectrumApp?</h2>
+        <div class="features-container">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-bolt"></i>
+                </div>
+                <h3>Lightning Fast</h3>
+                <p>Experience unparalleled speed with our optimized workflows and responsive interface.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <h3>Secure by Design</h3>
+                <p>Your data is protected with enterprise-grade security and regular backups.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-code-branch"></i>
+                </div>
+                <h3>Seamless Integration</h3>
+                <p>Connect with your favorite tools and services for a unified experience.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <h2 class="section-title">What Our Users Say</h2>
+        <div class="testimonials-container">
+            <div class="testimonial-card">
+                <div class="testimonial-content">
+                    <p>"SpectrumApp has completely transformed how our team collaborates. We've seen a 40% increase in productivity!"</p>
+                </div>
+                <div class="testimonial-author">
+                    <img src="/api/placeholder/60/60" alt="User Avatar" class="avatar">
+                    <div class="author-details">
+                        <h4>Sarah Johnson</h4>
+                        <p>Product Manager, TechCorp</p>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-content">
+                    <p>"The interface is intuitive and the customer support is phenomenal. I can't imagine working without it now."</p>
+                </div>
+                <div class="testimonial-author">
+                    <img src="/api/placeholder/60/60" alt="User Avatar" class="avatar">
+                    <div class="author-details">
+                        <h4>Michael Chen</h4>
+                        <p>Developer, InnovateTech</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="cta-content">
+            <h2>Ready to Get Started?</h2>
+            <p>Join thousands of satisfied users and take your productivity to the next level.</p>
+            <a href="#" class="btn btn-primary btn-large">Start Your Free Trial</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>SpectrumApp</h3>
+                <p>Making workflow management easy and efficient for teams of all sizes.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h4>Product</h4>
+                <ul>
+                    <li><a href="#">Features</a></li>
+                    <li><a href="#">Pricing</a></li>
+                    <li><a href="#">Integrations</a></li>
+                    <li><a href="#">Updates</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="#">Documentation</a></li>
+                    <li><a href="#">Tutorials</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Community</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 SpectrumApp. All rights reserved.</p>
+        </div>
+    </footer>
+{% endblock %}
