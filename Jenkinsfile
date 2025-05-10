@@ -9,7 +9,7 @@ pipeline {
     }
 
     options {
-        timestamps() 
+        timestamps()
     }
 
     stages {
@@ -20,7 +20,7 @@ pipeline {
         }
         stage('Building Docker Image') {
             steps {
-                dir('pythonm_webapp') {
+                dir('python_webapp') {
                     script {
                         sh "docker build -t ${DOCKER_IMAGE} ."
                     }
@@ -30,7 +30,7 @@ pipeline {
         stage('Testing') {
             steps {
                 script {
-                    sh "docker run --name test_${CONTAINER_NAME} -d -p 5001:5000 ${DCOKER_IMAGE}"
+                    sh "docker run --name test_${CONTAINER_NAME} -d -p 5001:5000 ${DOCKER_IMAGE}"
                     sh "sleep 10"
                     sh "curl -s http://localhost:5001/"
                     sh "docker stop test_${CONTAINER_NAME} || true"
@@ -39,7 +39,7 @@ pipeline {
             }
         }
     }
-
+    
     post {
         always {
             cleanWs()
