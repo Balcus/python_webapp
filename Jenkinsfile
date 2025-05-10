@@ -20,11 +20,9 @@ pipeline {
         }
         stage('Building Docker Image') {
             steps {
-                dir('python_webapp') {
-                    script {
-                        sh 'ls -la'
-                        sh "docker build -t ${DOCKER_IMAGE} ."
-                    }
+                script {
+                    sh 'ls -la'
+                    sh "docker build -t ${DOCKER_IMAGE} ."
                 }
             }
         }
