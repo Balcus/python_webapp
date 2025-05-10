@@ -44,7 +44,7 @@ pipeline {
                     sh '''
                     pip install pylint --break-system-packages
                     export PATH=$HOME/.local/bin:$PATH
-                    pylint --exit-zero stack.py
+                    pylint --exit-zero app.py
                     '''
                 }
             }
