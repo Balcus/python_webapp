@@ -22,6 +22,7 @@ pipeline {
             steps {
                 dir('python_webapp') {
                     script {
+                        ls -la
                         sh "docker build -t ${DOCKER_IMAGE} ."
                     }
                 }
@@ -39,7 +40,7 @@ pipeline {
             }
         }
     }
-    
+
     post {
         always {
             cleanWs()
