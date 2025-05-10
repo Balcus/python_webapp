@@ -1,7 +1,7 @@
 pipeline {
     agent any
 
-    enviroment {
+    environment {
         DOCKER_IMAGE_NAME = 'python_webapp'
         DOCKER_TAG = "${env.BUILD_NUMBER}"
         DOCKER_IMAGE = "${DOCKER_IMAGE_NAME}:${DOCKER_TAG}"
