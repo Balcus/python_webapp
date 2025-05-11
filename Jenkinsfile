@@ -44,9 +44,9 @@ pipeline {
         stage('Testing') {
             steps {
                 script {
-                    sh "docker run --name test_${CONTAINER_NAME} -d -p 5000:5000 ${DOCKER_IMAGE}"
+                    sh "docker run --name test_${CONTAINER_NAME} -d -p 5001:5000 ${DOCKER_IMAGE}"
                     sh "sleep 10"
-                    sh "curl -s http://localhost:5000/"
+                    sh "curl -s http://localhost:5001/"
                     sh "docker stop test_${CONTAINER_NAME} || true"
                     sh "docker rm test_${CONTAINER_NAME} || true"
                 }
