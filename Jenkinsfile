@@ -74,6 +74,7 @@ pipeline {
         always {
             script {
                 sh 'docker logout'
+                sh "docker rmi ${DOCKER_IMAGE} || true"
             }
             cleanWs()
         }
